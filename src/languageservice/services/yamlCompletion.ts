@@ -775,6 +775,7 @@ export class YamlCompletion {
                         insertText,
                         insertTextFormat: InsertTextFormat.Snippet,
                         documentation: this.fromMarkup(propertySchema.markdownDescription) || propertySchema.description || '',
+                        ...(propertySchema.suggestSortText && { sortText: propertySchema.suggestSortText }),
                       },
                       didOneOfSchemaMatches
                     );
@@ -791,6 +792,7 @@ export class YamlCompletion {
                       ),
                       insertTextFormat: InsertTextFormat.Snippet,
                       documentation: this.fromMarkup(propertySchema.markdownDescription) || propertySchema.description || '',
+                      ...(propertySchema.suggestSortText && { sortText: propertySchema.suggestSortText }),
                       parent: {
                         schema: schema.schema,
                         indent: identCompensation,
