@@ -87,6 +87,7 @@ export interface JSONSchema {
   markdownDescription?: string; // VSCode extension
   doNotSuggest?: boolean; // VSCode extension
   allowComments?: boolean; // VSCode extension
+  suggestSortText?: string; // VSCode extension
 
   schemaSequence?: JSONSchema[]; // extension for multiple schemas related to multiple documents in single yaml file
 
